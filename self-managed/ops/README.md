@@ -1,4 +1,4 @@
-# Manage permissions with access control lists (ACLs)
+# Automate reverse proxy configuration with consul-template
 
 This repository contains companion code for the following tutorial:
 
