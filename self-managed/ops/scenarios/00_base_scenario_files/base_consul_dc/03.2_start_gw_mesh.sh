@@ -115,7 +115,7 @@ EOF
   log_debug "Generate ACL tokens"
 
   AGENT_TOKEN=${CONSUL_HTTP_TOKEN}
-  DNS_TOK=${CONSUL_HTTP_TOKEN}
+  DNS_TOK=`cat ${STEP_ASSETS}secrets/acl-token-dns.json | jq -r ".SecretID"` 
 
   tee ${STEP_ASSETS}${NODE_NAME}/agent-acl-tokens.hcl > /dev/null << EOF
 acl {
